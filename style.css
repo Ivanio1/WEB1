@@ -1,0 +1,97 @@
+/*Селектор элемента*/
+td {
+    align-content: center;
+}
+
+/*Наследование-все остальные элементы, находящиеся внутри этого тега, независимо от уровня вложенности, унаследуют единое фоновое изображение.*/
+body {
+    background-image: url("pics/back.gif");
+    background-size: 100%;
+    background-attachment: fixed;
+
+}
+
+/*Селектор идентификатора*/
+#main_table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px;
+}
+
+/*Селектор идентификатора*/
+#sec_table {
+    width: 50%;
+    padding-top: 100px;
+}
+
+/*Селектор класса*/
+.text {
+    color: #2B2B2B;
+}
+
+/*Селектор идентификатора*/
+#check, #res {
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+/*Селектор идентификатора*/
+#MyEdit2 {
+    background-color: #6d51f1;
+}
+
+/*Селектор идентификатора*/
+#trouble {
+    color: white;
+}
+
+/*Дочерний селектор*/
+form > .otstup {
+    padding-bottom: 15px;
+    width: 350px;
+}
+
+/*Наведение*/
+#check:hover, #res:hover {
+    background: #F5DEB3 !important;
+}
+
+/*Нажатие*/
+#check:active, #res:active {
+    background: #6d51f1 !important;
+}
+
+/*Селектор атрибута*/
+img[alt="График"] {
+    box-shadow: 0 0 4px;
+}
+
+/*Селектор атрибута*/
+iframe[name="result"] {
+    border-width: 0px;
+    height: 160px;
+}
+
+/*Селектор атрибута*/
+input[name="r1"]:focus {
+    background: #6d51f1;
+}
+
+/*~Каскадирование~*/
+th {
+    color: #2B2B2B;
+    font-size: 20px;
+    width: 30%;
+
+}
+
+.info {
+    font-family: sans-serif;
+}
+
+/*~.............~*/
+
+#result{
+    background-color: aliceblue;
+}
