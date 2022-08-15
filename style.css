@@ -5,9 +5,12 @@ td {
 
 /*Наследование-все остальные элементы, находящиеся внутри этого тега, независимо от уровня вложенности, унаследуют единое фоновое изображение.*/
 body {
+    font-size: 16px;
+    font-family: "Open Sans", "Arial", sans-serif;
     background-image: url("pics/back.gif");
     background-size: 100%;
     background-attachment: fixed;
+    overflow-x: hidden;
 
 }
 
@@ -48,8 +51,9 @@ body {
 
 /*Дочерний селектор*/
 form > .otstup {
-    padding-bottom: 15px;
     width: 350px;
+    align-items: center;
+    vertical-align: top;
 }
 
 /*Наведение*/
@@ -82,16 +86,49 @@ input[name="r1"]:focus {
 th {
     color: #2B2B2B;
     font-size: 20px;
-    width: 30%;
+
 
 }
-
 .info {
     font-family: sans-serif;
 }
-
 /*~.............~*/
 
-#result{
+
+#result-table {
+    width: 500px;
+    text-align: center;
+    alignment: top;
     background-color: aliceblue;
+
+    border-top: 5px ridge #6d51f1;
 }
+#result-table tr {
+    height: 2em;
+}
+#result-table th {
+background-color: thistle;
+    height: 2em;
+}
+#result-table td {
+    border-right: 1px solid plum;
+    border-bottom: 1px solid plum;
+}
+
+.container {
+    width: 518px;
+    height: 450px;
+    overflow: scroll;
+    background-color: white;
+    border-right: 5px ridge #6d51f1;
+    border-left: 5px ridge #6d51f1;
+    border-bottom: 5px ridge #6d51f1;
+}
+
+.podpis{
+    color: #2B2B2B;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
