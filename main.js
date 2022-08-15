@@ -20,11 +20,11 @@ function validate() {
         document.getElementById("trouble").innerHTML = "Выберите корректное значение R";
         return false;
     }
+
+
 }
 
-function OnClick2(value, id) {
-    document.getElementById("MyEdit2").value = value;
-}
+
 $(function () {
     $('#input-form').on('submit', function (event) {
         event.preventDefault();
@@ -47,6 +47,7 @@ $(function () {
                     newRow += '<td>' + data.exectime + '</td>';
                     newRow += '<td>' + data.hitres + '</td>';
                     $('#result-table').append(newRow);
+
                 }
             }
         });
