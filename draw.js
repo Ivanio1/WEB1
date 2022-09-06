@@ -8,6 +8,11 @@ function set_R_value(id) {
     document.getElementById("MyEdit2").value = value_R;
     draw();
 }
+function set_X_value(id) {
+    value_R = document.getElementById(id).value;
+    document.getElementById("xval").value = value_R;
+
+}
 
 function drawPoint() {
     let x = Number(document.getElementById("xval").value);
