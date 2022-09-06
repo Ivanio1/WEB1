@@ -2,6 +2,7 @@ canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 let value_R = 0;
 draw()
+let value_x= 0;
 
 function set_R_value(id) {
     value_R = document.getElementById(id).value;
@@ -9,8 +10,8 @@ function set_R_value(id) {
     draw();
 }
 function set_X_value(id) {
-    value_R = document.getElementById(id).value;
-    document.getElementById("xval").value = value_R;
+    value_x = document.getElementById(id).value;
+    document.getElementById("xval").value = value_x;
 
 }
 
