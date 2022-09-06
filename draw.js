@@ -5,13 +5,19 @@ draw()
 let value_x= 0;
 
 function set_R_value(id) {
-    value_R = document.getElementById(id).value;
-    document.getElementById("MyEdit2").value = value_R;
-    draw();
+    if(document.getElementById(id).checked===true){
+        value_R = document.getElementById(id).value;
+        document.getElementById("MyEdit2").value = value_R;
+        draw();
+    }
+
 }
 function set_X_value(id) {
-    value_x = document.getElementById(id).value;
-    document.getElementById("xval").value = value_x;
+    if(document.getElementById(id).checked===true){
+        value_x = document.getElementById(id).value;
+        document.getElementById("xval").value = value_x;
+    }
+
 
 }
 
