@@ -41,10 +41,14 @@ body {
 
 /*Селектор идентификатора*/
 #MyEdit2 {
-    background-color: #6d51f1;
+    background-color: #0059CEFF;
+
 }
 #xval {
-    background-color: #6d51f1;
+    background-color: #0059CEFF;
+}
+#Y {
+    background-color:#0059CEFF;
 }
 
 /*Селектор идентификатора*/
@@ -104,7 +108,6 @@ th {
     text-align: center;
     alignment: top;
     background-color: aliceblue;
-
     border-top: 5px ridge #6d51f1;
 }
 #result-table tr {
@@ -117,6 +120,15 @@ th {
 #result-table td {
     border-right: 1px solid plum;
     border-bottom: 1px solid plum;
+}
+#info_div{
+    background-color: white;
+    border-radius: 5px;
+    width:75%;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
 }
 
 .container {

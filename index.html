@@ -8,7 +8,7 @@
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="pics/free-icon-orc-6595622.png">
-    <link rel="stylesheet/less" type="text/css" href="less.less" />
+    <link rel="stylesheet/less" type="text/css" href="less.less"/>
 </head>
 <body>
 
@@ -27,20 +27,29 @@
                   onsubmit="return validate()">
                 <div class="radio">
                     <label class="podpis">Изменение Х: </label>
-                    <input  type="radio" name="x_coordinate" class="x" id="x_value_-5" value="-5"   onclick="set_X_value(this.id)" >-5
-                    <input  type="radio" name="x_coordinate" class="x" id="x_value_-4" value="-4"onclick="set_X_value(this.id)">-4
-                    <input  type="radio" name="x_coordinate" class="x" id="x_value_-3" value="-3"onclick="set_X_value(this.id)">-3
-                    <input  type="radio" name="x_coordinate" class="x" id="x_value_-2" value="-2"onclick="set_X_value(this.id)">-2
-                    <input  type="radio" name="x_coordinate" class="x" id="x_value_-1" value="-1"onclick="set_X_value(this.id)">-1
-                    <input  type="radio" name="x_coordinate" class="x" id="x_value_0" value="0" checked onclick="set_X_value(this.id)"> 0<!-- выбран по дефолту-->
-                    <input  type="radio" name="x_coordinate" class="x" id="x_value_1" value="1"onclick="set_X_value(this.id)"> 1
-                    <input  type="radio" name="x_coordinate" class="x" id="x_value_2" value="2"onclick="set_X_value(this.id)"> 2
-                    <input  type="radio" name="x_coordinate" class="x" id="x_value_3" value="3"onclick="set_X_value(this.id)"> 3
-                    <input size="1" name="xval" id="xval" required="" value="0" readonly>
+                    <input type="radio" name="x_coordinate" class="x" id="x_value_-5" value="-5"
+                           onclick="set_X_value(this.id)">-5
+                    <input type="radio" name="x_coordinate" class="x" id="x_value_-4" value="-4"
+                           onclick="set_X_value(this.id)">-4
+                    <input type="radio" name="x_coordinate" class="x" id="x_value_-3" value="-3"
+                           onclick="set_X_value(this.id)">-3
+                    <input type="radio" name="x_coordinate" class="x" id="x_value_-2" value="-2"
+                           onclick="set_X_value(this.id)">-2
+                    <input type="radio" name="x_coordinate" class="x" id="x_value_-1" value="-1"
+                           onclick="set_X_value(this.id)">-1
+                    <input type="radio" name="x_coordinate" class="x" id="x_value_0" value="0" checked
+                           onclick="set_X_value(this.id)"> 0<!-- выбран по дефолту-->
+                    <input type="radio" name="x_coordinate" class="x" id="x_value_1" value="1"
+                           onclick="set_X_value(this.id)"> 1
+                    <input type="radio" name="x_coordinate" class="x" id="x_value_2" value="2"
+                           onclick="set_X_value(this.id)"> 2
+                    <input type="radio" name="x_coordinate" class="x" id="x_value_3" value="3"
+                           onclick="set_X_value(this.id)"> 3
+
                 </div>
                 <div class="otstup">
                     <label class="podpis"> Изменение У:
-                        <input type="text" name="yval" id="yval" placeholder="от -3 до 5">
+                        <input type="text" name="yval" id="yval" placeholder="от -3 до 5" onKeyUp="javascript:document.getElementById('Y').value = this.value;">
                     </label>
                 </div>
                 <div class="otstup">
@@ -55,14 +64,34 @@
                                                        value="2.5">
                     <label for="r15">3</label><input type="checkbox" id="r15" name="r1" onclick="set_R_value(this.id)"
                                                      value="3">
-                    <input size="1" name="rval" id="MyEdit2" value="1" required="" readonly>
+
                 </div>
-                <div class="otstup">
-                    <input id="check" class="button" type="submit" title="Проверить" onclick="drawPoint()">
-                    <input id="res" class="button" type="reset" onclick="draw(1)">
+                <div class="otstup" >
+                    <input id="check" class="button" type="submit" title="Проверить" onclick="drawPoint()" align="center">
+                    <input id="res" class="button" type="reset" onclick="draw(1)" align="center">
                 </div>
                 <input type="hidden" name="offset">
                 <div id="trouble">
+                </div>
+                <br>
+                <div id="info_div" align="center" >
+                    <table align="center" >
+                        <tr>
+                            <th colspan="3">Данные для отправки</th>
+                        </tr>
+                        <tr>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>R</th>
+                        </tr>
+                        <tr>
+                            <th> <input size="1" name="xval" id="xval" required="" value="0" readonly ></th>
+                            <th> <input size="1" name="yval" id="Y" required="" value="" readonly></th>
+                            <th> <input size="1" name="rval" id="MyEdit2" value="1" required="" readonly></th>
+                        </tr>
+                    </table>
+
+
                 </div>
             </form>
         </td>
@@ -83,7 +112,7 @@
             </div>
         </td>
         <td width="70%" align="center" class="plot">
-            <canvas id="canvas" ></canvas>
+            <canvas id="canvas"></canvas>
             <img src="pics/graph.jpg" alt="График" id="gr">
 
         </td>
@@ -93,7 +122,8 @@
 
 </table>
 </body>
-<a href="https://github.com/Ivanio1" id="illuminated" title="Перейти к профилю Github разработчика" style="position:fixed;right:5px;bottom:0px;z-index:1000;">Соболев Иван Александрович, P32312</a>
+<a href="https://github.com/Ivanio1" id="illuminated" title="Перейти к профилю Github разработчика"
+   style="position:fixed;right:5px;bottom:0px;z-index:1000;">Соболев Иван Александрович, P32312</a>
 </html>
 
 
@@ -101,4 +131,4 @@
 
 <script src="main.js"></script>
 <script src="draw.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/less" ></script>
+<script src="https://cdn.jsdelivr.net/npm/less"></script>

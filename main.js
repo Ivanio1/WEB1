@@ -1,6 +1,6 @@
 function validate() {
     let x = document.forms["input-form"]["xval"].value;
-    let y = document.forms["input-form"]["yval"].value;
+    let y = document.forms["input-form"]["Y"].value;
     let r = document.forms["input-form"]["rval"].value;
 
     if (isNaN(x) || x === "") {
