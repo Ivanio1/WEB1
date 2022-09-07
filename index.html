@@ -27,16 +27,16 @@
                   onsubmit="return validate()">
                 <div class="radio">
                     <label class="podpis">Изменение Х: </label>
-                        <input  type="radio" name="x_coordinate" class="x" id="x_value_-5" value="-5"   onclick="set_X_value(this.id)" >-5
-                        <input  type="radio" name="x_coordinate" class="x" id="x_value_-4" value="-4"onclick="set_X_value(this.id)">-4
-                        <input  type="radio" name="x_coordinate" class="x" id="x_value_-3" value="-3"onclick="set_X_value(this.id)">-3
-                        <input  type="radio" name="x_coordinate" class="x" id="x_value_-2" value="-2"onclick="set_X_value(this.id)">-2
-                        <input  type="radio" name="x_coordinate" class="x" id="x_value_-1" value="-1"onclick="set_X_value(this.id)">-1
-                        <input  type="radio" name="x_coordinate" class="x" id="x_value_0" value="0" checked onclick="set_X_value(this.id)"> 0<!-- выбран по дефолту-->
-                        <input  type="radio" name="x_coordinate" class="x" id="x_value_1" value="1"onclick="set_X_value(this.id)"> 1
-                        <input  type="radio" name="x_coordinate" class="x" id="x_value_2" value="2"onclick="set_X_value(this.id)"> 2
-                        <input  type="radio" name="x_coordinate" class="x" id="x_value_3" value="3"onclick="set_X_value(this.id)"> 3
-                    <input size="1" name="xval" id="xval" required="" readonly>
+                    <input  type="radio" name="x_coordinate" class="x" id="x_value_-5" value="-5"   onclick="set_X_value(this.id)" >-5
+                    <input  type="radio" name="x_coordinate" class="x" id="x_value_-4" value="-4"onclick="set_X_value(this.id)">-4
+                    <input  type="radio" name="x_coordinate" class="x" id="x_value_-3" value="-3"onclick="set_X_value(this.id)">-3
+                    <input  type="radio" name="x_coordinate" class="x" id="x_value_-2" value="-2"onclick="set_X_value(this.id)">-2
+                    <input  type="radio" name="x_coordinate" class="x" id="x_value_-1" value="-1"onclick="set_X_value(this.id)">-1
+                    <input  type="radio" name="x_coordinate" class="x" id="x_value_0" value="0" checked onclick="set_X_value(this.id)"> 0<!-- выбран по дефолту-->
+                    <input  type="radio" name="x_coordinate" class="x" id="x_value_1" value="1"onclick="set_X_value(this.id)"> 1
+                    <input  type="radio" name="x_coordinate" class="x" id="x_value_2" value="2"onclick="set_X_value(this.id)"> 2
+                    <input  type="radio" name="x_coordinate" class="x" id="x_value_3" value="3"onclick="set_X_value(this.id)"> 3
+                    <input size="1" name="xval" id="xval" required="" value="0" readonly>
                 </div>
                 <div class="otstup">
                     <label class="podpis"> Изменение У:
@@ -46,20 +46,20 @@
                 <div class="otstup">
                     <label class="podpis"> Изменение R: </label>
                     <label for="r11">1</label><input type="checkbox" id="r11" name="r1" onclick="set_R_value(this.id)"
-                                                    value="1">
+                                                     value="1" checked>
                     <label for="r12">1.5</label><input type="checkbox" id="r12" name="r1" onclick="set_R_value(this.id)"
-                                                    value="1.5">
+                                                       value="1.5">
                     <label for="r13">2</label><input type="checkbox" id="r13" name="r1" onclick="set_R_value(this.id)"
-                                                    value="2">
+                                                     value="2">
                     <label for="r14">2.5</label><input type="checkbox" id="r14" name="r1" onclick="set_R_value(this.id)"
-                                                    value="2.5">
+                                                       value="2.5">
                     <label for="r15">3</label><input type="checkbox" id="r15" name="r1" onclick="set_R_value(this.id)"
-                                                    value="3">
-                    <input size="1" name="rval" id="MyEdit2" required="" readonly>
+                                                     value="3">
+                    <input size="1" name="rval" id="MyEdit2" value="1" required="" readonly>
                 </div>
                 <div class="otstup">
                     <input id="check" class="button" type="submit" title="Проверить" onclick="drawPoint()">
-                    <input id="res" class="button" type="reset">
+                    <input id="res" class="button" type="reset" onclick="draw(1)">
                 </div>
                 <input type="hidden" name="offset">
                 <div id="trouble">

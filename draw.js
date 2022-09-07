@@ -1,14 +1,14 @@
 canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
-let value_R = 0;
-draw()
+let value_R = 1;
+draw(value_R)
 let value_x= 0;
 
 function set_R_value(id) {
     if(document.getElementById(id).checked===true){
         value_R = document.getElementById(id).value;
         document.getElementById("MyEdit2").value = value_R;
-        draw();
+        draw(value_R);
     }
 
 }
@@ -27,7 +27,7 @@ function drawPoint() {
     let r = Number(document.getElementById("MyEdit2").value);
     if (x >= r + 1 || y >= r + 1 || x <= -1 * r - 1 || y <= -1 * r - 1) {
         alert('Выход за пределы видимости графика\nНе могу отобразить точку');
-        draw();
+        draw(r);
     } else {
 
         ctx.fillStyle = "red";
@@ -42,7 +42,7 @@ function drawPoint() {
 
 }
 
-function draw() {
+function draw(r) {
     ctx.clearRect(0, 0, 1000, 1000);
 
     ctx.fillStyle = "rgb(0,89,206)";
@@ -79,17 +79,17 @@ function draw() {
     //значения X
     ctx.moveTo(175, 75);
     ctx.lineTo(175, 65);
-    ctx.fillText(value_R / 2, 170, 63);
+    ctx.fillText(r / 2, 170, 63);
     ctx.moveTo(200, 75);
     ctx.lineTo(200, 65);
-    ctx.fillText(value_R, 197, 63);
+    ctx.fillText(r, 197, 63);
 
     ctx.moveTo(125, 75);
     ctx.lineTo(125, 65);
-    ctx.fillText(-1 * value_R / 2, 114, 63);
+    ctx.fillText(-1 * r / 2, 114, 63);
     ctx.moveTo(100, 75);
     ctx.lineTo(100, 65);
-    ctx.fillText(-1 * value_R, 96, 63);
+    ctx.fillText(-1 * r, 96, 63);
 
     //линия Y
     ctx.moveTo(150, 70);
@@ -105,17 +105,17 @@ function draw() {
     //значения Y
     ctx.moveTo(145, 95);
     ctx.lineTo(155, 95);
-    ctx.fillText(-1 * value_R / 2, 160, 100);
+    ctx.fillText(-1 * r / 2, 160, 100);
     ctx.moveTo(145, 120);
     ctx.lineTo(155, 120);
-    ctx.fillText(-1 * value_R, 160, 123);
+    ctx.fillText(-1 * r, 160, 123);
 
     ctx.moveTo(145, 45);
     ctx.lineTo(155, 45);
-    ctx.fillText(value_R / 2, 160, 48);
+    ctx.fillText(r / 2, 160, 48);
     ctx.moveTo(145, 20);
     ctx.lineTo(155, 20);
-    ctx.fillText(value_R, 160, 25);
+    ctx.fillText(r, 160, 25);
     ctx.closePath();
     ctx.stroke();
 }

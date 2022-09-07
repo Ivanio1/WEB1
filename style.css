@@ -111,7 +111,7 @@ th {
     height: 2em;
 }
 #result-table th {
-background-color: thistle;
+    background-color: thistle;
     height: 2em;
 }
 #result-table td {
@@ -145,5 +145,4 @@ background-color: thistle;
 .radio{
     display: inline;
 }
-
 
